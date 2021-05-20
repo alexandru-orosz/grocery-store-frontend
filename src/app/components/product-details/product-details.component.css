@@ -1,0 +1,24 @@
+.price {
+    color:white;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: white;
+    font-weight: 500;
+}
+
+hr {
+    background: #404141;
+}
+
+a {
+    color:white;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.container-fluid {
+    margin-bottom: 580px;
+}

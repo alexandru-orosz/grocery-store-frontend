@@ -1,0 +1,54 @@
+mat-slide-toggle {
+    color: #b7b7b7;   
+}
+
+input {
+    color: white;
+}
+
+h3 {
+    color: white;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    padding: 20px;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    border: 2px solid #969696;
+    border-radius: 15px;
+}
+
+.form-field {
+    width: 100%;
+}
+
+.container-fluid {
+    padding-top: 0;
+}
+
+#main-content {
+    padding-top: 150px;
+    padding-left: 40px;
+}
+
+button {
+    margin-left: 200px;
+}
+
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    color: #b7b7b7; 
+  }
+  
+.example-radio-button {
+    margin-left: 5px;
+}
+
+#example-radio-group-label {
+    color: #b7b7b7;
+}
