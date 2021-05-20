@@ -164,7 +164,7 @@ export class CheckoutComponent implements OnInit {
 
     this.checkoutService.placeOrder(purchase).subscribe({
         next: response => {
-          let snackBarRef = this.snackBar.open(`Your order has been received. \nOrder trackingNumber: ${response.orderTrackingNumber}`, 'Dismiss', {duration: 5000});
+          let snackBarRef = this.snackBar.open(`Your order has been received. \nOrder tracking number: ${response.orderTrackingNumber}`, 'Dismiss', {duration: 5000});
 
           snackBarRef.afterDismissed().subscribe(() => {
             this.resetCart()
