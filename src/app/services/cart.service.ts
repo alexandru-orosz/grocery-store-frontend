@@ -13,7 +13,19 @@ export class CartService {
   totalPrice: Subject<number> = new BehaviorSubject<number>(0);
   totalQuantity: Subject<number> = new BehaviorSubject<number>(0);
 
-  constructor(private snackBar: MatSnackBar) { }
+  storage: Storage = sessionStorage;
+
+  constructor(private snackBar: MatSnackBar) {
+
+    // read data from storage
+    let data = JSON.parse(this.storage.getItem('cartItems'));
+
+    if(data != null) {
+      this.cartItems = data;
+      this.computeCartTotals();
+    }
+
+   }
 
   addToCart(cartItem: CartItem, displaySnackBar: boolean) {
     
@@ -54,6 +66,12 @@ export class CartService {
     this.totalPrice.next(totalPriceValue);
     this.totalQuantity.next(totalQuantityValue);
 
+    this.persistCartItems();
+
+  }
+
+  persistCartItems() {
+    this.storage.setItem('cartItems', JSON.stringify(this.cartItems));
   }
 
   decrementQuantity(cartItem: CartItem) {
